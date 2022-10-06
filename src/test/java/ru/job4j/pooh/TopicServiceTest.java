@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-class TopicServiceTest {
+public class TopicServiceTest {
 
     @Test
     public void whenTopic() {
@@ -63,7 +63,7 @@ class TopicServiceTest {
     }
 
     @Test
-    void whenTextIsNull() {
+    public void whenTextIsNull() {
         TopicService topicService = new TopicService();
         String paramForPublishers = "temperature=25";
         String pub1 = "client01";

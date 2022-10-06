@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-class QueueServiceTest {
+public class QueueServiceTest {
 
     @Test
-    void whenPostThenGetQueue() {
+    public void whenPostThenGetQueue() {
         QueueService queueService = new QueueService();
         String paramForPostMethod = "temperature=18";
         queueService.process(
@@ -20,7 +20,7 @@ class QueueServiceTest {
     }
 
     @Test
-    void whenNoData() {
+    public void whenNoData() {
         QueueService queueService = new QueueService();
         Resp result = queueService.process(
                 new Req("GET", "queue", "weather", null)
@@ -30,7 +30,7 @@ class QueueServiceTest {
     }
 
     @Test
-    void when2PostThen2GetQueue() {
+    public void when2PostThen2GetQueue() {
         QueueService queueService = new QueueService();
         String paramForPostMethod1 = "temperature=18";
         String paramForPostMethod2 = "temperature=25";
